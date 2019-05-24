@@ -1,0 +1,23 @@
+<view style='text-align:center;margin-top:200rpx;'>
+  <view style='margin-bottom:50rpx'>请输入房间码</view>
+
+  <paySix 
+  bindvalueSix="valueSix" 
+  input_value="{{inputData.input_value}}" 
+  value_length="{{inputData.value_length}}" 
+  isNext="{{inputData.isNext}}" 
+  get_focus="{{inputData.get_focus}}" 
+  focus_class="{{inputData.focus_class}}" 
+  value_num="{{inputData.value_num}}"
+  height="{{inputData.height}}" 
+  width="{{inputData.width}}" 
+  see="{{inputData.see}}" 
+  interval="{{inputData.interval}}">
+  </paySix>
+
+  <view style='margin-top: 200rpx;text-align:center;color:#999;font-size:14px'>房间码总是重复？试试快速获取房间码</view>
+
+  <view class="button-sp-area">
+  <button class="weui-btn" type="default" bindtap='getRoomNumber' plain="true"style='margin-top :100rpx'>下一步</button>
+  </view>
+</view>

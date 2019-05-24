@@ -1,0 +1,15 @@
+<view class='viewclass'>
+ <view class="page__hd">
+  <view class="weui-article">
+<view class="weui-article__title" style='text-align:center;'>以下是您最近完成计划的详细数据，快来看看自己到底有多少收获^-^</view>
+</view>
+</view>
+<canvas class='item'  canvas-id="pieCanvas"></canvas>
+<view style='color:#999;font-size:14px'>折线图仅显示在最近六次计划</view>
+<canvas class='item' canvas-id="pieCanvas1"></canvas>
+
+</view>
+<view class="page__bd page__bd_spacing">
+<button style='margin-top:50px;width :90%' class="weui-btn" type="primary" bindtap="displayAll">查看全部历史信息</button>
+<view style='padding:10px'></view>
+</view>

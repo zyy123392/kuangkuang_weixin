@@ -1,0 +1,48 @@
+{
+  "pages":[   
+    "pages/index/index",
+    "pages/chickenSoup/chickenSoup",
+    "pages/input/input",
+    "pages/logs/logs",
+    "pages/creat_input/creat_input",
+    "pages/join_input/join_input", 
+    "pages/component/component",
+    "pages/component1/component",
+    "pages/join_input/fail",
+    "pages/input/fail1",
+    "pages/detail_info/detail_info",
+    "pages/join_input/existFail",
+    "pages/join_input/availableFail",
+    "pages/logAll/logAll",
+    "pages/calendar/index",
+    "pages/welcome/welcome"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#ff5d00",
+    "navigationBarTitleText": "哐哐打卡",
+
+    "navigationBarTextStyle":"light"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/heart1.png",
+        "iconPath": "images/heart.png",
+        "pagePath": "pages/chickenSoup/chickenSoup",
+        "text": "每日推送"
+      },
+      {
+        "selectedIconPath": "images/日历1.png",
+        "iconPath": "images/日历.png",
+        "pagePath": "pages/index/index",
+        "text": "打卡"
+      }
+    ]
+  }
+
+}
+

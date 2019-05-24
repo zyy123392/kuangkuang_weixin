@@ -1,0 +1,11 @@
+<view class="c-minheight wx-view_eeR5DS" style='margin-top :30px;'>
+    <image class="wx-image_iumw9Z"  mode="scaleToFill" src="https://cloud-minapp-13144.cloud.ifanrusercontent.com/1fk00VvcjqgktzHD.jpg" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat; background-image:   url(https://cloud-minapp-13144.cloud.ifanrusercontent.com/1fk00VvcjqgktzHD.jpg); "/>
+</view>
+<view class="c-minheight wx-view_KuSJlR" bindtap='createRoom'style='margin-top :60px;'>
+    <text class="c-block wx-text_cg3WJZ" >创建房间</text>
+</view>
+<view class="c-minheight wx-view_5p56jF" >
+    <view class="c-minheight wx-view_KuSJlR" bindtap='joinRoom'>
+        <text class="c-block wx-text_cg3WJZ" >加入房间</text>
+    </view>
+</view>

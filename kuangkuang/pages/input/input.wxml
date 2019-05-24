@@ -1,0 +1,66 @@
+<view class="weui-article__h3" style='margin-top : 8px;'> 请填写以下信息：</view>
+<view class="weui-cells__title">计划的主题</view>
+<view class="weui-cells weui-cells_after-title" style='margin-bottom : 13px;'>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入文本" bindchange="bindTitleChange" />
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">金额</view>
+    </view>
+    <view class="weui-cell__bd">
+      <input class="weui-input" placeholder="请输入金额（1-100）" type='number' bindchange="bindPayChange" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">日期</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{date}}" end="2018-12-25"start="{{date}}" bindchange="bindDateChange">
+        <view class="weui-input">{{date}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__hd">
+      <view class="weui-label">时间</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="time" value="{{time}}"  bindchange="bindTimeChange">
+        <view class="weui-input">{{time}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+<view class="weui-cells__tips">金额，日期及时间</view>
+
+
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">可以退出</view>
+    <view class="weui-cell__ft">
+      <switch checked  bindchange='bindCanExitChange'/>
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells__title">具体规则</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">
+      <textarea class="weui-textarea" placeholder="请输入文本" style="height: 6em" bindinput='bindRuleChange'/>
+      <view class="weui-textarea-counter"></view>
+    </view>
+  </view>
+</view>
+
+<view class="weui-btn-area" style='margin-top : 35px;'>
+  <button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+</view>
+<view style='padding-bottom : 10px;'></view>

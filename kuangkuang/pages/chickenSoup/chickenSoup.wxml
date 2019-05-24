@@ -1,0 +1,19 @@
+<import src="../../wxParser/index.wxml"/>
+<view class="c-minheight wx-view_eKQtsA" >
+    <view class="c-minheight wx-view_aczuEo" >
+        <text class="c-block wx-text_QCYMGW" >{{time}}</text>
+    </view>
+    <view class="c-minheight wx-view_VIUj0u" >
+      <image class="wx-image_5d45dD" data-c_e_id="wx_image_265e8b58" mode="aspectFill" src="{{picture}}" style="background-size:  cover; background-position:  center center; background-repeat:  no-repeat; background-image: url({{picture}}); "/>
+ 
+    </view>
+    
+    <view class="c-minheight wx-view_VYiDMS" />
+    <view class="c-minheight wx-view_4sVexf" >
+        <view class="wxParser" style='margin-left:  7px; margin-right:  7px;'>
+ <template is="wxParser" data="{{wxParserData:richText.nodes}}"/></view>
+    </view>
+    <view class="c-minheight wx-view_qyDUAT" style='margin-top:15px;'>
+        <text class="c-block wx-text_u4NXZe" >哐哐打卡工作室</text>
+    </view>
+</view>

@@ -1,0 +1,148 @@
+
+<view class="weui-cells weui-cells_after-title" style='margin-top:10px;'>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">房间名</view>
+    <view class="weui-cell__ft">{{RoomName}}</view>
+  </view>
+</view>
+
+ <view class='container'  style='margin-top:10px;'>
+<view class="weui-article__section">
+  <view class="weui-article__h3" style='margin-left : 8px;'>规则:</view>
+  <view class="weui-article__p" style='margin-left : 8px;'>
+    {{RoomRule}}
+  </view>
+</view>
+</view>
+
+
+<view class="youhui">
+  <view class="{{_num==0?'active':''}}" data-index='0' bindtap='toggle'>
+    打卡
+  </view>
+  <view class="{{_num==1?'active':''}}" data-index='1' bindtap='toggle'>
+    详情
+  </view>
+  <view class="{{_num==2?'active':''}}" data-index='2' bindtap='toggle'>
+    排行榜
+  </view>
+</view>
+
+
+
+
+<swiper current="{{_num}}"  duration="200" bindchange="bindChange" style='display:   flex;'>
+  <!-- 未使用 -->
+  <swiper-item>
+  <scroll-view style='height:100%' scroll-y="true" >
+ <view class="weui-cells__title">快来帮好友打卡</view>
+ <view style='margin-top: 200rpx;text-align:center;color:#999;font-size:14px'class="{{showView1?'':'hide'}}">还没有好友。</view>
+        <view class="weui-cells weui-cells_after-title">
+        <block wx:for="{{friendList}}" wx:key="name">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <image src="{{item.avatar}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">{{item.name}}</view>
+                <button class="weui-btn mini-btn" type="primary" size="mini" style='margin-top : 0px;background-color: #ff5d00;' data-friendid="{{ item.id }}" bindtap='registers'       disabled="{{disabled}}">打卡</button>
+            </view>
+            </block>
+        </view>
+  </scroll-view>
+  </swiper-item>
+ 
+  <!-- 已过期 -->
+  <swiper-item>
+  <scroll-view style='height:100%' scroll-y="true" >
+    <view class="container">
+<loading hidden="{{loadingHidden}}">  
+  加载中...  
+</loading>
+<block wx:for="{{allList}}" wx:key="name">
+  <view class="userinfo">
+    <image data-allid="{{item.id}}" bindtap="calendar" class="userinfo-avatar" src="{{item.avatar}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{item.name}}</text>
+  </view>
+  </block>
+  <view class="userinfo"style='overflow: hidden;'>
+ <button  class="userinfo-avatar" style='margin:0;padding:0;width:85rpx;height:85rpx;' open-type="share" > <image class="userinfo-avatar" src="https://cloud-minapp-13144.cloud.ifanrusercontent.com/1fn8BftPCHNzCaoS.png" background-size="cover"  style='margin:0;width:80rpx;height:80rpx;'></image></button>
+     <text class="userinfo-nickname">邀 请</text>
+  </view>
+</view>
+
+
+   <view class='daka'>
+<label class='lable' style='margin-right : 20px;'>打卡天数：{{takeDay}}天</label>
+<label class='lable' style='margin-left : 20px;'>共需打卡：{{totalDay}}天</label>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">房间号</view>
+    <view class="weui-cell__ft">{{RoomID}}</view>
+  </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">截止日期</view>
+    <view class="weui-cell__ft">{{RoomEndTime}}</view>
+  </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">奖池</view>
+    <view class="weui-cell__ft">{{RoomAward}}</view>
+  </view>
+</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">目前可得</view>
+    <view class="weui-cell__ft">{{availableCredit}}</view>
+  </view>
+</view>
+
+
+
+        <view class="weui-cells__title">客服</view>
+        <view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell">
+    <view class="weui-cell__bd">客服小冰</view>
+   <button class="weui-btn mini-btn"  type="primary"  open-type='contact' size="mini" style='margin-top : 0px;background-color: #ff5d00;'>联系她</button>
+  </view>
+</view>
+<button type="warn"  class="hide{{RoomCanExsit?'weui-btn':''}}" style='margin-top:20px;width:90%;' bindtap='exists' >退出房间</button>
+<view style='padding-bottom : 20px;'></view>
+<button type="warn"  class="hide{{showView?'weui-btn':''}}" style='margin-top:20px;width:90%;' bindtap='roomAvailable' disabled="{{available}}">{{availableCondition}}</button>
+<view style='padding-bottom : 20px;'></view>
+  </scroll-view>
+
+  </swiper-item>
+   <!-- 已使用 -->
+  <swiper-item>
+    <scroll-view style='height:100%' scroll-y="true" >
+ <block wx:for="{{rangeList}}"  wx:key="{{name}}">
+   <view class="c-minheight wx-view_fBSCcq" style="margin-top:20px;"  >
+    <view class="c-minheight wx-view_JbWxfk" >
+        <view class="c-minheight carditem01" >
+            <view class="wx-view_QvvUkU" >
+                <view class="wx-navigator_rv4BGW"  hover-class="navigator-hover">
+                  
+                    <view class="wx-view_cPj0ok" >
+                        <text class="c-block wx-text_TvHPc9" >{{item.name}}</text>
+                        <text class="c-block wx-text_LS2Jup" >获得积分{{item.availableCredit}}</text>
+                    </view>
+                    <view class="c-minheight wx-view_PzFyBt" >
+                        <text class="c-block wx-text_tqJvv8" >第{{index+1}}名</text>
+                    </view>
+                </view>
+            </view>
+            <view class="wx-navigator_PNd8QQ"  hover-class="navigator-hover"/>
+        </view>
+    </view>
+</view>
+</block>
+</scroll-view>
+  </swiper-item>
+</swiper>
+
+
+        

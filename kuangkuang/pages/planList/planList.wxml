@@ -1,0 +1,11 @@
+         <view class="weui-cells__title">正在进行：</view>
+        
+       <block wx:for="{{projects}}"  wx:key="ID">
+
+<navigator class="c-minheight wx-view_lMWmY6" style='margin-top:10px;margin-bottom:10px;'url="../detail_info/detail_info?RoomID={{item.ID}}">
+    <view class="c-minheight wx-view_44IvaH" >
+        <text class="c-block wx-text_H8aM8c" >房间名:{{item.RoomName}}</text>
+    </view>
+</navigator>
+            </block>
+        

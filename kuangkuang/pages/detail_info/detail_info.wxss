@@ -1,0 +1,61 @@
+.container{
+display: flex;
+flex-flow: row wrap;
+justify-content: flex-start;
+margin: 20rpx;
+align-items: center;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 20rpx;
+  border-radius: 50%;
+}
+.userinfo {
+    display: flex;
+    flex-direction: column;
+    padding: 50rpx 0;
+    align-items: center;
+}
+.userinfo-nickname {
+  font-size: small;
+}
+.daka {
+   display: flex;
+   justify-content:center;
+}
+.show-btn {
+  margin-top: 100rpx;
+  color: #22cc22;
+}
+.youhui{
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+  background-color: #fff;
+  height:100rpx;
+  font-size: 32rpx;
+  border-top:1px solid #F0F0F0;
+  border-bottom:1px solid #F0F0F0;
+}
+.youhui>view{
+  display: flex;
+  align-items: center;
+}
+.active{
+  color: #DF2E26;
+  border-bottom:3px solid #DF2E26;
+}
+page{
+ background-color: #EEEEEE; 
+}
+.hide{
+ display: none;
+}
+page{height:100%}
+swiper{height:68%}
+::-webkit-scrollbar{
+display:none;
+}

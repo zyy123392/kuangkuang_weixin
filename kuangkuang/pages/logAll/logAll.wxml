@@ -1,0 +1,15 @@
+<block wx:for="{{log}}"  wx:key="startTime">
+<view class='container'>
+<view class="weui-article">
+<view class="weui-article__section">
+  <view class="weui-article__h3">{{item.startTime}}至{{item.endTime}}</view>
+   <view class="weui-article__section">
+  <view class="weui-article__p" >
+您在名为{{item.RoomName}}的房间中历时{{item.totalDay}}天，打卡{{item.takeDay}}天,{{item.availableCredit}}
+  </view>
+  </view>
+</view>
+</view>
+</view>
+</block>
+<view style='padding : 10px'></view>

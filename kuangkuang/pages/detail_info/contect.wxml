@@ -1,0 +1,4 @@
+<view>
+  <image style="margin: 120px 40px;width: 75%; height: 250px;background-color: #eeeeee;" src='{{scene}}' bindtap="previewImage"></image>
+</view>
+  <view class="weui-media-box__desc"style="width:100%;text-align:center;">扫一扫联系客服。</view>

@@ -1,0 +1,20 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
+.viewclass{
+
+  width: 100%;
+  display: flex;
+  flex-wrap:wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.item{
+  height:200px;
+  width:320px;
+}

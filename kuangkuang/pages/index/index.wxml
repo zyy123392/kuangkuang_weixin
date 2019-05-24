@@ -1,0 +1,49 @@
+
+<view class="topTabBar">
+<view style=' width:100%;display:flex;;flex-direction:column;flex-flow: wrap row; justify-content:flex-end;'>
+    <label class='lable' style='margin-right:20px;'>信誉度：{{credit}}</label>
+    </view>
+    <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 授权登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap="bindViewTap"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  </view>
+  <view class="triangle1">
+  <view class="triangle">
+  </view>
+  </view>
+   <view style='margin-top: 40px;text-align:center;color:#999;font-size:14px'class="{{showView?'':'hide'}}">您还没有计划，快去加入计划吧。</view>
+<scroll-view scroll-y="true" class="c-minheight wx-view_zA41cP" data-c_e_id="wx_view_79ad4fe3">
+<block wx:for="{{projects}}"  wx:key="ID">
+    <view class="c-minheight wx-view_XVBbKU" data-c_e_id="wx_view_4df2b236">
+        <view class="c-minheight wx-view_YchKvk" data-c_e_id="wx_view_06262ec6">
+            <text class="c-block wx-text_36XoRs" data-c_e_id="wx_text_ea0ab9af">{{item.RoomName}}</text>
+        </view>
+        <view class="c-minheight wx-view_W2AdyI" data-c_e_id="wx_view_a090761a">
+            <button class="wx-button_2jMP00" data-c_e_id="wx_button_b8b7c97e" hover-class="button-hover" size="default" type="default" data-allid="{{item.ID}}" bindtap='showList'>
+                打卡
+            </button>
+        </view>
+    </view>
+</block>
+
+</scroll-view>
+<view style='margin-top:13px;padding-top:10px;background-color:#EEEEEE;'></view>
+<view class="c-minheight wx-view_jjEs0d" style='position:absolute; bottom:30px;width: 100%;display:flex'>
+    <view class="c-minheight wx-view_ZIgcLF" >
+        <view class="c-minheight wx-view_cC7m6g" bindtap='createRoom'>
+            <image class="wx-image_8gB7wK"  mode="scaleToFill" src="https://cloud-minapp-13144.cloud.ifanrusercontent.com/1fn8BmMCWQwuQCzM.png" style="background-size: 100% 100%; background-position: 0% 0%; background-repeat: no-repeat; background-image:    url(https://cloud-minapp-13144.cloud.ifanrusercontent.com/1fn8BmMCWQwuQCzM.png); "/>
+        </view>
+        <text class="c-block wx-text_D4bT0D" >创建计划</text>
+    </view>
+    <view class="c-minheight wx-view_ZIgcLF1" />
+    <view class="c-minheight wx-view_ZIgcLF" >
+        <view class="c-minheight wx-view_cC7m6g" bindtap='joinRoom'>
+            <image class="wx-image_8gB7wK"  mode="scaleToFill" src="https://cloud-minapp-13144.cloud.ifanrusercontent.com/1fn8BftPCHNzCaoS.png" style="background-size:  100% 100%; background-position:  0% 0%; background-repeat:  no-repeat; background-image: url(https://cloud-minapp-13144.cloud.ifanrusercontent.com/1fn8BftPCHNzCaoS.png); "/>
+        </view>
+        <text class="c-block wx-text_BYNecq" >加入计划</text>
+    </view>
+</view>
